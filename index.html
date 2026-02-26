@@ -1,0 +1,210 @@
+<think>
+The user wants me to open the website I created. However, as an AI, I cannot directly open a website in a browser. But I can provide instructions on how they can view and use the website.
+
+Let me provide them with:
+1. The complete code in a way they can easily use
+2. Instructions on how to run it
+
+I'll create a single HTML file that contains everything (CSS and JavaScript included) so it's easy for them to use.
+</think> I'll provide it as a single HTML file that includes all CSS and JavaScript.
+
+## Instructions to Open:
+
+1. **Copy the code below**
+2. **Create a new file** on your computer named `index.html`
+3. **Paste the code** into that file and save it
+4. **Double-click** the `index.html` file to open it in your browser
+
+---
+
+## Complete Code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Tariq Aziz | Soil Scientist & Environmental Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #2c5f2d; --secondary: #97bc62; --accent: #1a3a1c;
+            --text: #333; --text-light: #666; --bg: #f8f9fa; --white: #fff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1); --shadow2: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+        
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; background: var(--white); box-shadow: var(--shadow); z-index: 1000; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        .nav-brand { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; transition: 0.3s; font-size: 0.95rem; }
+        .nav-links a:hover { color: var(--primary); }
+        .hamburger { display: none; font-size: 1.5rem; cursor: pointer; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 8rem 5% 4rem; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+        .hero .title { font-size: 1.4rem; margin-bottom: 1rem; opacity: 0.9; }
+        .hero .affiliation { font-size: 1.1rem; opacity: 0.85; margin-bottom: 2rem; }
+        .hero-buttons { display: flex; gap: 1rem; }
+        .btn { padding: 0.8rem 2rem; border: none; border-radius: 50px; font-size: 1rem; cursor: pointer; transition: 0.3s; text-decoration: none; display: inline-block; }
+        .btn-primary { background: white; color: var(--primary); }
+        .btn-secondary { background: transparent; color: white; border: 2px solid white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: var(--shadow2); }
+        
+        /* Sections */
+        section { padding: 4rem 5%; }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 0.5rem; }
+        .section-title .underline { width: 80px; height: 4px; background: var(--secondary); margin: 0 auto; border-radius: 2px; }
+        
+        /* About */
+        .about { background: var(--white); }
+        .about-content { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: start; max-width: 1200px; margin: 0 auto; }
+        .about-image img { width: 100%; max-width: 280px; border-radius: 10px; box-shadow: var(--shadow); }
+        .about-text p { margin-bottom: 1rem; color: var(--text-light); }
+        .about-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem; }
+        .stat-box { text-align: center; padding: 1.2rem; background: var(--bg); border-radius: 10px; }
+        .stat-number { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .stat-label { font-size: 0.85rem; color: var(--text-light); }
+        
+        /* Positions */
+        .positions { background: var(--bg); }
+        .positions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .position-card { background: var(--white); padding: 1.5rem; border-radius: 10px; box-shadow: var(--shadow); border-left: 4px solid var(--primary); transition: 0.3s; }
+        .position-card:hover { transform: translateY(-5px); }
+        .position-card h3 { color: var(--primary); margin-bottom: 0.3rem; }
+        .position-card .institution { font-weight: 600; margin-bottom: 0.3rem; }
+        .position-card .period { color: var(--text-light); font-size: 0.85rem; margin-bottom: 0.8rem; }
+        
+        /* Research */
+        .research { background: var(--white); }
+        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .research-card { padding: 1.5rem; background: var(--bg); border-radius: 10px; transition: 0.3s; text-align: center; }
+        .research-card:hover { transform: translateY(-5px); background: var(--primary); color: white; }
+        .research-icon { font-size: 2rem; color: var(--primary); margin-bottom: 0.8rem; }
+        .research-card:hover .research-icon { color: white; }
+        .research-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .research-card p { font-size: 0.85rem; color: var(--text-light); }
+        .research-card:hover p { color: rgba(255,255,255,0.85); }
+        
+        /* Publications */
+        .publications { background: var(--bg); }
+        .publications-list { max-width: 900px; margin: 0 auto; }
+        .publication-item { background: var(--white); padding: 1.3rem; margin-bottom: 1rem; border-radius: 8px; box-shadow: var(--shadow); border-left: 3px solid transparent; transition: 0.3s; }
+        .publication-item:hover { border-left-color: var(--primary); transform: translateX(5px); }
+        .publication-item h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+        .publication-item .authors { font-size: 0.85rem; color: var(--text-light); }
+        .publication-item .journal { color: var(--primary); font-weight: 600; font-size: 0.9rem; }
+        .pub-link { display: inline-block; padding: 0.3rem 0.8rem; background: var(--bg); color: var(--primary); text-decoration: none; border-radius: 5px; font-size: 0.8rem; margin-top: 0.8rem; margin-right: 0.5rem; transition: 0.3s; }
+        .pub-link:hover { background: var(--primary); color: white; }
+        
+        /* Projects */
+        .projects { background: var(--white); }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .project-card { background: var(--bg); border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .project-card:hover { transform: translateY(-5px); box-shadow: var(--shadow2); }
+        .project-header { background: var(--primary); color: white; padding: 1.2rem; }
+        .project-header h3 { font-size: 1.1rem; }
+        .project-header span { font-size: 0.8rem; opacity: 0.85; }
+        .project-body { padding: 1.2rem; }
+        .project-body p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 0.8rem; }
+        .tag { display: inline-block; padding: 0.2rem 0.6rem; background: var(--secondary); color: var(--accent); border-radius: 12px; font-size: 0.75rem; margin-right: 0.3rem; }
+        
+        /* Events */
+        .events { background: var(--bg); }
+        .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .event-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow); transition: 0.3s; }
+        .event-card:hover { transform: translateY(-5px); box-shadow: var(--shadow2); }
+        .event-icon { background: var(--primary); color: white; padding: 1.5rem; text-align: center; font-size: 1.5rem; }
+        .event-content { padding: 1.2rem; }
+        .event-date { color: var(--primary); font-weight: 600; font-size: 0.85rem; }
+        .event-content h4 { margin: 0.5rem 0; font-size: 1rem; }
+        .event-content p { font-size: 0.85rem; color: var(--text-light); }
+        
+        /* Tours */
+        .tours { background: var(--white); }
+        .tours-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
+        .tour-card { background: var(--bg); border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .tour-card:hover { transform: translateY(-5px); box-shadow: var(--shadow2); }
+        .tour-icon { height: 100px; background: var(--primary); display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; }
+        .tour-content { padding: 1.2rem; }
+        .tour-content h3 { font-size: 1rem; }
+        .tour-content .country { color: var(--primary); font-weight: 600; font-size: 0.85rem; }
+        .tour-content .date { font-size: 0.8rem; color: var(--text-light); margin-bottom: 0.5rem; }
+        
+        /* Contact */
+        .contact { background: var(--bg); }
+        .contact-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .contact-links { display: flex; justify-content: center; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; }
+        .contact-item { display: flex; align-items: center; gap: 0.5rem; color: var(--text); }
+        .contact-item a { color: var(--primary); text-decoration: none; }
+        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+        .social-links a { width: 45px; height: 45px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s; text-decoration: none; }
+        .social-links a:hover { transform: translateY(-5px); background: var(--secondary); }
+        
+        /* Footer */
+        footer { background: var(--accent); color: white; padding: 2rem 5%; text-align: center; }
+        footer p { opacity: 0.85; font-size: 0.9rem; }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: white; flex-direction: column; padding: 1rem; gap: 1rem; box-shadow: var(--shadow); }
+            .nav-links.active { display: flex; }
+            .hamburger { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .about-content { grid-template-columns: 1fr; text-align: center; }
+            .about-stats { grid-template-columns: repeat(2, 1fr); }
+            .events-timeline::before { display: none; }
+            .event-item, .event-item:nth-child(even) { padding: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">Dr. Tariq Aziz</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#positions">Positions</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Dr. Tariq Aziz</h1>
+        <p class="title">Soil Scientist & Environmental Researcher</p>
+        <p class="affiliation">Associate Professor | Institute of Soil & Environmental Sciences<br>University of Agriculture Faisalabad, Pakistan</p>
+        <div class="hero-buttons">
+            <a href="#publications" class="btn btn-primary">Publications</a>
+            <a href="#contact" class="btn btn-secondary">Contact</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="https://www.uaf.edu.pk/Uploadfiles/StaffResume/873e3475-85a9-433f-a39a-7384dacb552a.jpg" alt="Dr. Tariq Aziz" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%22100%22 fill=%22%232c5f2d%22/><text x=%22100%22 y=%22110%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>TA</text></svg>'">
+            </div>
+            <div class="about-text">
+                <p>Dr. Tariq Aziz is a leading Pakistani soil scientist specializing in sustainable nutrient management, with particular focus on nitrogen and phosphorus use in agriculture. He serves as Associate Professor at the Institute of Soil & Environmental Sciences, University of Agriculture Faisalabad.</p>
+                <p>As Regional Director (South Asia) of the International Nitrogen Initiative (INI), he represents South Asia in global efforts to balance nitrogen use for food security and environmental protection. His research bridges the gap between agricultural productivity and environmental sustainability.</p>
+                <p>He has supervised numerous Ph.D. and M.Sc. students and maintains active collaborations with international universities including the University of Giessen (Germany) and University of Western Australia.</p>
+                <div class="about-stats">
+                    <div class="stat-box"><div class="stat-number">100+</div><div class="stat-label">Publications</div></div>
+                    <div class="stat-box"><div class="stat-number">5+</div><div class="stat-label">Ph
